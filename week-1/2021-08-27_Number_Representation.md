@@ -11,9 +11,9 @@
 - Hardware design schema
 - Machine Structures
 
-### Computer Structures
+### Computer Architectures
 **Old-School Structures**
-
+![Old-School Architecture](../images/2021-08-27_1.png)
 **New-School: Parallelization**
 - Parallel (software) requests
 - Parallel threads
