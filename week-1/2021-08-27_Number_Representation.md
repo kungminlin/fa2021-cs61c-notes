@@ -70,5 +70,23 @@
 - Bits-to-hex conversion: Group of 4 bits form a hex digit
 
 ### Signed and Unsigned Integers
+- 2^10 (1024) is approximately 1000
 
+**Unsigned Integers**
+- Usually used for memory addresses
+- Represent 0 to 2^32 - 1 (32-bit)
 
+**Signed Integers**
+- *Two's-Complement* Representation
+- Treat 0 as positive
+- Represent -2^31 to 2^31 - 1 (32-bit)
+- Most-significant bit (MSB) (leftmost) is the sign bit
+    - 0 is positive; 1 is negative
+- The value of an N-bit word is:
+    - -2^(N-1) * b^(N-1) + 2^(N-2) * b^(N-2) + ... + 2^1 * b^1 + 2^0 * b^0
+- Methodology
+    - Invert all bits and add 1
+    - This is the method computer circuits use
+- Carry-in and carry-out MSB
+    - Carry-in: When MSB is 0, but result MSB is 1, making the number negative
+    - Carry-out: When both input MSB is 1, resulting in overflow with the original MSB position being 0, making the number positives
