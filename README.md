@@ -5,3 +5,4 @@ Week 1
 
 Week 2
 - [2021-08-30 C Intro](./week-2/2021-08-30_C_Intro.md)
+- [2021-09-08 C Arrays, Pointers, Strings](./week-2/2021-09-03_C_Arrays_Pointers_Strings.md)
