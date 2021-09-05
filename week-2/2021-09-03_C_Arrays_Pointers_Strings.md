@@ -1,5 +1,32 @@
 # C Arrays, Pointers, Strings
-
+## Table of Contents
+  - [C Syntax](#c-syntax)
+    - [Variable Declaration](#variable-declaration)
+    - [Undefined Behavior](#undefined-behavior)
+    - [Control Flow](#control-flow)
+    - [Boolean](#boolean)
+    - [Operators](#operators)
+    - [Valgrind](#valgrind)
+  - [Memory](#memory)
+    - [Pointer Syntax](#pointer-syntax)
+  - [Types of Pointer](#types-of-pointer)
+    - [Null Pointers](#null-pointers)
+    - [C Pointer Dangers](#c-pointer-dangers)
+    - [Pointers and Structures](#pointers-and-structures)
+    - [Why pointers?](#why-pointers)
+    - [`sizeof()` Operator](#sizeof-operator)
+    - [Pointer Arithmetic](#pointer-arithmetic)
+    - [Pointer Conclusion](#pointer-conclusion)
+  - [Structures](#structures)
+    - [Unions](#unions)
+  - [C Arrays](#c-arrays)
+    - [Array Operations](#array-operations)
+    - [Array and Structure and Pointers](#array-and-structure-and-pointers)
+    - [Heartbleed](#heartbleed)
+  - [C Strings](#c-strings)
+    - [`strlen()`](#strlen)
+    - [Arguments in `main()`](#arguments-in-main)
+  - [Endianness](#endianness)
 ## C Syntax
 ### Variable Declaration
 Java

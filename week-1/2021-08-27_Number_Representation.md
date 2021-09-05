@@ -1,5 +1,17 @@
 # Intro & Number Representation
 
+## Table of Contents
+  - [Introduction to Computer Design](#introduction-to-computer-design)
+    - [Hardware Design](#hardware-design)
+    - [Logism](#logism)
+    - [Computer Architectures](#computer-architectures)
+    - [5 Great Ideas in Computer Science](#5-great-ideas-in-computer-science)
+  - [Number Representation](#number-representation)
+    - [Why Bits?](#why-bits)
+    - [Other Bases](#other-bases)
+    - [Hexadecimal](#hexadecimal)
+    - [Signed and Unsigned Integers](#signed-and-unsigned-integers)
+
 ## Introduction to Computer Design
 ### Hardware Design
 - RISC-V (Reduced Instruction Set Computers V)

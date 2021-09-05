@@ -1,5 +1,22 @@
 # Brian Harvey's Intro to C
-
+## Table of Contents
+  - [61C from a 61A Perspective](#61c-from-a-61a-perspective)
+    - [Abstraction](#abstraction)
+    - [The Stored Program Computer](#the-stored-program-computer)
+  - [C as a Low-Level Language](#c-as-a-low-level-language)
+  - [C Pitfalls](#c-pitfalls)
+    - [15 Levels of Precedence](#15-levels-of-precedence)
+    - [Type Casting](#type-casting)
+    - [`switch` and `break`](#switch-and-break)
+  - [Storage Classes](#storage-classes)
+    - [`extern`](#extern)
+    - [`static`](#static)
+  - [The `main()` Procedure](#the-main-procedure)
+  - [Arrays and Pointers](#arrays-and-pointers)
+    - [Memory Addresses](#memory-addresses)
+    - [Endianness](#endianness)
+    - [C Pointer Types](#c-pointer-types)
+    - [Arrays](#arrays)
 ## 61C from a 61A Perspective
 
 ### Abstraction
