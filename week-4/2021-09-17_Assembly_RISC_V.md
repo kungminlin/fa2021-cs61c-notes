@@ -133,3 +133,64 @@ A[10] = h + A[3];
 - `lbu` is used to load and zero extend to fill register for unsigned byte
 - There is no `sbu`
 
+## Assembly Conventions
+
+**Symbolic Register Names**
+- a0 - a7 for argument registers (x10 - x17)
+- x0 for zero
+
+**Pseudo-instructions**
+- Instructions that don't exist in machine instruction but assembler automatically parses
+- `mv rd, rs` = `addi rd, rs, 0`
+
+### Register Conventions
+![Register Conventions](../images/2021-09-20_3.png)
+
+## Functions
+1. Put parameters in a place where function can access
+2. Transfer control to function (jump)
+3. Acquire storage needed for function (e.g. local variables)
+4. Perform desired task
+5. Put result value in a place where calling code can access
+6. Return control to point of origin
+
+### Calling Convention
+- Caller-saved
+  - The function invoked (the callee) can do whatever it wants to them
+  - Caller cannot count on their contents
+- Callee-saved
+  - The function invoked must restore them before returning
+
+| Register | Purpose |
+| - | - |
+| a0 - a7 | Parameters |
+| a0 - a1 | Return values |
+| ra | Return address |
+| s0 - s11 | Saved registers (callee-saved) |
+| fp | s0; Frame pointer: Points to the top of the call frame |
+| sp | x2; Stack pointer; Points to the last used place on the stack |
+| t0 - t6 | Temporaries; caller-saved |
+
+### Example
+```c
+int Leaf(int g, int h, int i, int j) {
+  int f;
+  f = (g + h) - (i + j);
+  return f;
+}
+```
+- Parameter variables `g`, `h`, `i`, `j` in argument registers `a0`, `a1`, `a2`, `a3`
+
+```
+leaf: addi  sp, sp, -8    # adjust stack for 2 items
+      sw    s1, 4(sp)     # save s1 for use afterwards
+      sw    s0, 0(sp)     # save s0 for use afterwards
+      add   s0, a0, a1    # s0 = g + h
+      add   s1, a2, a3    # s1 = i + j
+      sub   a0, s0, s1    # (g + h) - (i + j)
+      lw    s0, 0(sp)     # restore register s0 for caller
+      lw    s1, 4(sp)     # restore register s1 for caller
+      addi  sp, sp, 8     # adjust stack to delete 2 items
+      jr    ra            # save ra
+```
+- We didn't need to save `ra` because it doesn't call another function
